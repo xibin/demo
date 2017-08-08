@@ -1,6 +1,7 @@
 package com.iim.service;
 
 import com.iim.dao.UserDao;
+import com.iim.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,4 +12,8 @@ import org.springframework.stereotype.Service;
 public class UserService {
     @Autowired
     UserDao userDao;
+
+    public User getUserByName(String userName){
+        return userDao.getUserByName(userName);
+    }
 }

@@ -11,7 +11,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserDao {
     @Autowired
-    UserMapper userMapper;
+    private UserMapper userMapper;
+
+    public UserMapper getUserMapper() {
+        return userMapper;
+    }
 
     public User getUserByName(String userName){
         User queryUser = new User();

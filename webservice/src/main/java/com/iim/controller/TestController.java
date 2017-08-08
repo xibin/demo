@@ -1,6 +1,6 @@
 package com.iim.controller;
 
-import com.iim.dao.UserDao;
+import com.iim.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TestController {
     @Autowired
-    UserDao userDao;
+    UserService userService;
     @RequestMapping("/hello")
     public String sayHello(){
-        return "Hello Demo!<br>"+userDao.getUserByName("xibin");
+        return "Hello Demo!<br>"+userService.getUserByName("xibin");
     }
 }
