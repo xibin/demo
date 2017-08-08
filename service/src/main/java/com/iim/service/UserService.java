@@ -14,6 +14,8 @@ public class UserService {
     UserDao userDao;
 
     public User getUserByName(String userName){
-        return userDao.getUserByName(userName);
+        User queryUser = new User();
+        queryUser.setUserName(userName);
+        return userDao.getUserMapper().selectOne(queryUser);
     }
 }
