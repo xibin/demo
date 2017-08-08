@@ -15,7 +15,7 @@ druid:
 
 mybatis:
   type-aliases-package: com.iim.model
-  mapper-locations: classpath:mapper/*.xml
+#  mapper-locations: classpath:mapper/*.xml
 
 mapper:
   mappers:
