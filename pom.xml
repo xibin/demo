@@ -14,6 +14,7 @@
         <module>model</module>
         <module>dao</module>
         <module>service</module>
+        <module>message</module>
     </modules>
     <name>demo</name>
     <description>demo project</description>
@@ -60,6 +61,12 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+
+        <!-- mq -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-amqp</artifactId>
         </dependency>
 
         <!-- util-->
