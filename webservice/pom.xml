@@ -33,7 +33,7 @@
         </dependency>
         <dependency>
             <groupId>com.iim</groupId>
-            <artifactId>message</artifactId>
+            <artifactId>amq</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>

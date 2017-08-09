@@ -14,7 +14,7 @@
         <module>model</module>
         <module>dao</module>
         <module>service</module>
-        <module>message</module>
+        <module>amq</module>
     </modules>
     <name>demo</name>
     <description>demo project</description>

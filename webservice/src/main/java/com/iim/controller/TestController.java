@@ -1,6 +1,6 @@
 package com.iim.controller;
 
-import com.iim.message.product.Sender;
+import com.iim.amq.producer.Sender;
 import com.iim.service.IUserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
