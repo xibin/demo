@@ -29,6 +29,7 @@ taskexecutor:
   corepoolsize: 5
   maxpoolsize: 20
   queuecapacity: 10
+  threadnameprefix: ThreadPoolTaskExecutorByProject-
 
 mybatis:
   type-aliases-package: com.iim.model.entity

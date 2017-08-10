@@ -13,9 +13,9 @@ import java.util.concurrent.Executor;
 /**
  * Created by xibin on 2017/8/10.
  */
+@ConfigurationProperties("taskexecutor")
 @Configuration
 @EnableAsync
-@ConfigurationProperties("taskexecutor")
 public class TaskExecutorConfig implements AsyncConfigurer {
 
     private int corepoolsize;
@@ -23,6 +23,16 @@ public class TaskExecutorConfig implements AsyncConfigurer {
     private int maxpoolsize;
 
     private int queuecapacity;
+
+    private String threadnameprefix;
+
+    public String getThreadnameprefix() {
+        return threadnameprefix;
+    }
+
+    public void setThreadnameprefix(String threadnameprefix) {
+        this.threadnameprefix = threadnameprefix;
+    }
 
     public int getCorepoolsize() {
         return corepoolsize;
@@ -54,6 +64,7 @@ public class TaskExecutorConfig implements AsyncConfigurer {
         taskExecutor.setCorePoolSize(corepoolsize);
         taskExecutor.setMaxPoolSize(maxpoolsize);
         taskExecutor.setQueueCapacity(queuecapacity);
+        taskExecutor.setThreadNamePrefix(threadnameprefix);
         taskExecutor.initialize();
         return taskExecutor;
     }

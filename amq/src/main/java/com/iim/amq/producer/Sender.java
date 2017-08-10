@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 
 /**
@@ -17,6 +18,7 @@ public class Sender {
     @Autowired
     private RabbitTemplate rabbitTemplate;
 
+    @Async
     public void send(String message) {
         this.rabbitTemplate.convertAndSend("demo-queue", message);
         logger.info(message);
