@@ -14,7 +14,7 @@ import java.util.List;
 @Service
 @Transactional
 public class UserService extends BaseService<User> implements IUserService {
-
+    
     public List<User> getAllUser() {
         return selectAll();
     }
