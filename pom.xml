@@ -15,6 +15,7 @@
         <module>dao</module>
         <module>service</module>
         <module>amq</module>
+        <module>test</module>
     </modules>
     <name>demo</name>
     <description>demo project</description>
@@ -144,5 +145,6 @@
             </resource>
         </resources>
     </build>
+
 
 </project>

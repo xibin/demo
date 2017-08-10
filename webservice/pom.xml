@@ -13,11 +13,6 @@
     <dependencies>
         <dependency>
             <groupId>com.iim</groupId>
-            <artifactId>config</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.iim</groupId>
             <artifactId>service</artifactId>
             <version>${project.version}</version>
         </dependency>
@@ -33,6 +28,11 @@
         </dependency>
         <dependency>
             <groupId>com.iim</groupId>
+            <artifactId>config</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.iim</groupId>
             <artifactId>amq</artifactId>
             <version>${project.version}</version>
         </dependency>
@@ -43,6 +43,9 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>com.iim.Application</mainClass>
+                </configuration>
                 <executions>
                     <execution>
                         <goals>
@@ -53,6 +56,5 @@
             </plugin>
         </plugins>
     </build>
-
 
 </project>

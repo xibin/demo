@@ -1,6 +1,6 @@
 package com.iim.service;
 
-import com.iim.model.User;
+import com.iim.model.entity.User;
 import com.iim.service.base.IService;
 
 import java.util.List;

@@ -7,8 +7,8 @@ import org.springframework.stereotype.Component;
  * Created by xibin on 2017/8/9.
  */
 @Component
-@ConfigurationProperties("aws")
-public class AWSProperties {
+@ConfigurationProperties("oss")
+public class OSSConfig {
 
     private String bucketid;
 
@@ -29,4 +29,5 @@ public class AWSProperties {
     public void setBasepath(String basepath) {
         this.basepath = basepath;
     }
+
 }

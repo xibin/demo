@@ -7,38 +7,25 @@ import javax.persistence.*;
  */
 public class BaseEntity {
 
-    @Id
-    @Column(name="ID")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    @Transient
+    private int page = 1;
 
     @Transient
-    private Integer page = 1;
+    private int rows = 10;
 
-    @Transient
-    private Integer rows = 10;
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public Integer getPage() {
+    public int getPage() {
         return page;
     }
 
-    public void setPage(Integer page) {
+    public void setPage(int page) {
         this.page = page;
     }
 
-    public Integer getRows() {
+    public int getRows() {
         return rows;
     }
 
-    public void setRows(Integer rows) {
+    public void setRows(int rows) {
         this.rows = rows;
     }
 }

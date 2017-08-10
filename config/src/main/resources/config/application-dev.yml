@@ -11,7 +11,7 @@ spring:
     password: 5523380
     druid:
       initialSize: 5
-      maxIdle: 2
+      minIdle: 5
       maxActive: 10
       maxWait: 10000
       StatViewServlet:
@@ -25,9 +25,14 @@ spring:
     publisher-confirms: true
     virtual-host: /
 
+taskexecutor:
+  corepoolsize: 5
+  maxpoolsize: 20
+  queuecapacity: 10
 
 mybatis:
-  type-aliases-package: com.iim.model
+  type-aliases-package: com.iim.model.entity
+#  mapper-locations: classpath:mapper/*.xml
 
 mapper:
   mappers:

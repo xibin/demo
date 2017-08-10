@@ -1,6 +1,6 @@
 package com.iim.service.impl;
 
-import com.iim.model.User;
+import com.iim.model.entity.User;
 import com.iim.service.IUserService;
 import com.iim.service.base.BaseService;
 import org.springframework.stereotype.Service;
